@@ -19,7 +19,7 @@ model_path = '/workspaces/Practice/Practice/MIT808/best.pt'
 #    st.error(f"Error loading model: {e}")
 
 
-model = YOLO('/workspaces/Practice/Practice/MIT808/best.pt')
+model = YOLO('/workspaces/Practice/last.pt')
 
 model.export(format='onnx')
 
@@ -66,6 +66,8 @@ if image_file is not None:
         st.write(f"{length:.2f} pixels")
 
     st.image(cv2.cvtColor(result_img, cv2.COLOR_BGR2RGB), caption='Detected Elephants', use_column_width=True)
+
+st.write("Note: The model detects the back length of elephants in the uploaded image.")
 
 st.write("Note: The model detects the back length of elephants in the uploaded image.")
 
