@@ -9,8 +9,8 @@ from ultralytics import YOLO
 st.title('YOLOv8 Model Deployment with Streamlit')
 
 # Specify the correct path to your model file
-model_path = '/workspaces/Practice/Practice/Practice/best.pt'
-
+#model_path = '/workspaces/Practice/Practice/Practice/best.pt'
+model_path = '/workspaces/Practice/Practice/MIT808/best.pt'
 # Load the YOLOv8 model
 try:
     model = YOLO(model_path)
