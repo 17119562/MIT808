@@ -69,4 +69,3 @@ if image_file is not None:
 
 st.write("Note: The model detects the back length of elephants in the uploaded image.")
 
-
