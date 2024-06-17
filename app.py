@@ -12,11 +12,17 @@ st.title('YOLOv8 Model Deployment with Streamlit')
 #model_path = '/workspaces/Practice/Practice/Practice/best.pt'
 model_path = '/workspaces/Practice/Practice/MIT808/best.pt'
 # Load the YOLOv8 model
-try:
-    model = YOLO(model_path)
-    model.export(format='onnx')
-except Exception as e:
-    st.error(f"Error loading model: {e}")
+#try:
+#    model = YOLO(model_path)
+#    model.export(format='onnx')
+#except Exception as e:
+#    st.error(f"Error loading model: {e}")
+
+
+model = YOLO('/workspaces/Practice/Practice/MIT808/best.pt')
+
+model.export(format='onnx')
+
 
 def load_image(image_file):
     img = Image.open(image_file)
